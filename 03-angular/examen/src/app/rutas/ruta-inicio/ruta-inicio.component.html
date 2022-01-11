@@ -1,0 +1,86 @@
+<div [ngStyle]="{
+  'background-color' : colorbg
+}
+" class="d-lg-flex">
+  <div class="col-lg-3 p-2">
+    <a href="" >
+      <img src="https://logodownload.org/wp-content/uploads/2018/10/mercado-libre-logo.png" alt="Mercado Libre"
+           [width]="scaleImg" [height]="scaleImg/3.5" class="mx-5 my-1 p-2  mx-auto d-block">
+    </a>
+  </div>
+  <div class="col-lg-6 p-3 ">
+    <form class="d-flex shadow-sm ">
+      <input class="form-control border-end-0" type="search" placeholder="Buscar productos, marcas y más..." aria-label="Search">
+      <button id="search-button" type="button" class="btn bg-white border-start "><i class="fas fa-search fs-4"></i></button>
+    </form>
+  </div>
+
+</div>
+<div [ngStyle]="{
+  'background-color' : colorbg
+}
+" class="d-lg-flex p-2 align-middle">
+  <div class="text-lg-end text-center col-lg-2 m-1">
+    <a href="" class= "link-dark text-decoration-none fs-6 p-5">Categorías</a>
+  </div>
+  <div class=" text-center col-lg-4 fs-6 m-1">
+    <a href="" class= "link-dark text-decoration-none m-5"
+       *ngFor="let opcion of opciones; let i = index">{{opcion}}</a>
+  </div>
+<div class="d-flex justify-content-lg-end  justify-content-center col-lg-4 m-1">
+  <i class="far fa-user-circle fs-3"></i>
+  <div class="dropdown mx-2">
+    <a class="btn dropdown-toggle py-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      {{usuario.nombre}}
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li class="d-flex">
+        <i class="far fa-user-circle fs-3 p-1"></i>
+        <div class="pe-5 ps-1 ">
+          <p class="fw-bold m-0">Hola {{usuario.nombre}}</p>
+          <p class="m-0">{{usuario.cooreo}}</p>
+        </div>
+
+      </li>
+      <li *ngFor="let opcion of opcionesUsuario; let i = index"><a class="dropdown-item" href="{{opcion.link}}">{{opcion.nombre}}</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li *ngFor="let opcion of opcionesConfiguracion; let i = index"><a class="dropdown-item" href="{{opcion.link}}">{{opcion.nombre}}</a></li>
+    </ul>
+  </div>
+  <a href="" class= "link-dark text-decoration-none fs-6">Mis compras</a>
+  <div class="dropdown mx-2">
+    <a class="btn dropdown-toggle py-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+      Favoritos
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="width: 350px; height: 116px">
+      <li class="fw-bold mx-1">Favoritos</li>
+      <li><hr class="dropdown-divider"></li>
+      <li style="background: #f8f8ff ; font-size: 12px " class="text-center">
+        Agrega aquí los productos que te gustaron <br> para poder verlos más tarde</li>
+    </ul>
+  </div>
+  <a href=""><i class="far fa-bell fs-4"></i></a>
+</div>
+
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div class="col-6 d-flex " style="font-size: 12px">
+      <a class="mx-2 text-decoration-none text-dark" href="">Términos y condiciones</a>
+      <a class="mx-2 text-decoration-none text-dark" href="">Cómo cuidamos tu privacidad</a>
+      <a class="mx-2 text-decoration-none text-dark" href="">Ayuda</a>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <a class="mx-2 text-decoration-none text-secondary" href="" style="font-size: 12px">
+      Copyright © 1999-2022 MercadoLibre Ecuador Cia. Ltda</a>
+  </div>
+
+</div>
+
+

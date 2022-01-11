@@ -1,0 +1,19 @@
+<div [ngStyle]="{
+  'background-color' : colorBar
+}"
+class="border-bottom border-1"
+>
+  <a [routerLink]="['/inicio']">
+  <img src="https://logodownload.org/wp-content/uploads/2018/10/mercado-libre-logo.png" alt="Mercado Libre"
+       [width]="scaleImg" [height]="scaleImg/3.5" class="mx-5 my-1 p-2">
+  </a>
+</div>
+<div class="aling-middle py-5 my-5">
+  <img src="https://cdn.discordapp.com/attachments/843197362608144384/929456513003712532/unknown.png"
+       alt="Página no encontrada" class="rounded mx-auto d-block" [width]="scaleImg*1.5" [height]="scaleImg">
+  <p class="text-center fs-4 fw-bold my-3">Parece que esta página no existe</p>
+  <div class="text-center">  <a [routerLink]="['/inicio']"  class= "link-secondary text-decoration-none">Ir a la página principal</a></div>
+
+</div>
+
+

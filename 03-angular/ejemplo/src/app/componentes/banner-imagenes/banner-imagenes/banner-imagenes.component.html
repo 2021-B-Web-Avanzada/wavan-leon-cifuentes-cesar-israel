@@ -1,0 +1,29 @@
+<h1 [ngStyle]="{
+ 'background-color': '#000000',
+ 'color': color,
+ 'border': 'solid 5px' + color
+}" >banner-imagenes works!</h1>
+}
+
+<!-- INTERPOLACIÓN: TEXTO MUESTRA INTERFAZ-->
+<!--Sintaxis: usar dos llaves-->
+<h2>{{nombre}}-{{apellido}}</h2>
+<p>Mascota: {{mascota.negro.edad}}</p>
+
+
+<a [href]="url" target="_blank">MÁS INFORMACIÓN</a> <br>
+<img [src]="imagen"  alt="llama">
+
+
+<!-- EVENT BINDING-->
+<button
+  (click)="ejecutarEventoClick()"
+  (blur)="ejecutarEventoBlur()"
+>Event Binding
+</button>
+
+<p>{{fecha | date}}</p>
+<p>{{sueldo | currency}}</p>
+<pre>
+  {{mascota | json}}
+</pre>
