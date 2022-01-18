@@ -1,0 +1,43 @@
+<div [ngStyle]="{
+  'background-color' : colorbg
+}" class="d-flex justify-content-center">
+  <div class="col-lg-7 fw-bold fs-5 py-5 ">{{categoriaNombre}}</div>
+</div>
+<div [ngStyle]="{
+  'background-color' : colorbg
+}" class="d-flex justify-content-center">
+  <div class="col-lg-4 p-5 bg-white mb-5 d-flex" style="font-size: 13px">
+    <div class="col">
+      <div *ngFor="let subC of subCategoriasc1; let i = index" class="col">
+        <a href="" class="text-decoration-none fw-bold text-dark" >{{subC.nombre}}</a>
+        <a href="" *ngFor="let sub of subC.objetos let i = index"
+           class="text-decoration-none text-dark fw-lighter"><br>{{sub}}</a>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngFor="let subC of subCategoriasc2; let i = index" class="col">
+        <a href="" class="text-decoration-none fw-bold text-dark" >{{subC.nombre}}</a>
+        <a href="" *ngFor="let sub of subC.objetos let i = index"
+           class="text-decoration-none text-dark fw-lighter"><br>{{sub}}</a>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngFor="let subC of subCategoriasc3; let i = index" class="col">
+        <a href="" class="text-decoration-none fw-bold text-dark" >{{subC.nombre}}</a>
+        <a href="" *ngFor="let sub of subC.objetos let i = index"
+           class="text-decoration-none text-dark fw-lighter"><br>{{sub}}</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-3 ms-3 mb-5  d-flex flex-wrap" >
+    <div class="col-6" *ngFor="let elemento of elementosVenta; let i = index" style="height: 200px">
+      <button type="button" class="btn  btn-outline-light bg-white border-1 text-dark mx-2 " >
+        <img src="{{elemento.img}}" alt="" class="img-fluid">
+        <div class="fw-bold text-start">{{elemento.precio}} </div>
+        <div class=" text-start">{{elemento.descripcion}} </div>
+      </button>
+    </div>
+  </div>
+</div>
+

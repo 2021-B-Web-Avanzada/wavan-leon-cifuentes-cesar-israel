@@ -1,0 +1,43 @@
+### POST - CREAR EMPRESA
+
+POST http://localhost:3000/empresas
+Content-Type: application/json
+
+{
+    "nombre":"GOOGLE",
+    "descripcion":"Google, LLC es una compañía principal subsidiaria de la multinacional estadounidense Alphabet",
+    "fechaFundacion":"1998-09-04T05:00:00.000Z",
+    "webSite":"google.com"
+}
+### OTRA EMPRESA
+POST http://localhost:3000/empresas
+Content-Type: application/json
+
+{
+    "nombre":"Microsoft",
+    "descripcion":"Microsoft Corporation es una compañía tecnológica multinacional con sede en Redmond, Washington, Estados Unidos.",
+    "fechaFundacion":"1975-04-04T05:00:00.000Z",
+    "webSite":"microsoft.com"
+}
+
+### GET - OBTENER TODAS LAS EMPRESAS
+
+GET http://localhost:3000/empresas
+### GET - OBTENER una empresa por ID
+
+GET http://localhost:3000/empresas/61b8b5c13f3020e4ce88737e
+
+### PUT - ACTUALIZAR DATOS
+
+PUT  http://localhost:3000/empresas/61b8b5c13f3020e4ce88737e
+Content-Type: application/json
+
+{
+    "nombre":"Oracle",
+    "descripcion":"Oracle Corporation es una compañía especializada en el desarrollo de soluciones de nube y locales.",
+    "fechaFundacion":"1997-06-16T05:00:00.000Z",
+    "webSite":"oracle.com"
+}
+### DELETE BY ID
+
+DELETE  http://localhost:3000/empresas/61b8b404ced7c0a04321e26a

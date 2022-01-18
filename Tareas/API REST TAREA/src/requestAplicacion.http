@@ -1,0 +1,49 @@
+### POST - CREAR aplicacion
+
+POST http://localhost:3000/aplicacion
+Content-Type: application/json
+
+{
+    "empresa" : "GOOGLE",
+    "nombre":"YouTube",
+    "descripcion":"YouTube es un sitio web de origen estadounidense dedicado a compartir videos.",
+    "fechaCreacion":"2005-02-14T05:00:00.000Z",
+    "versionActual":"16.49.36",
+    "costo":"FREE"
+}
+### OTRA APLICACION
+POST http://localhost:3000/aplicacion
+Content-Type: application/json
+
+{
+    "empresa" : "GOOGLE",
+    "nombre":"Gmail",
+    "descripcion":"La app oficial de Gmail incorpora lo mejor de Gmail en tu teléfono o tablet Android, con seguridad...",
+    "fechaCreacion":"2021-12-09T05:00:00.000Z",
+    "versionActual":"2021.11.28.415100679",
+    "costo":"FREE"
+}
+
+#### GET - OBTENER TODAS LAS APLICACIONES
+
+GET http://localhost:3000/aplicacion
+### GET - OBTENER una APLICACION por ID
+
+GET http://localhost:3000/aplicacion/61b8b5c63f3020e4ce887382
+
+### PUT - ACTUALIZAR DATOS
+
+PUT  http://localhost:3000/aplicacion/61b8b5c73f3020e4ce887384
+Content-Type: application/json
+
+{
+    "empresa" : "*GOOGLE",
+    "nombre":"*Gmail",
+    "descripcion":"*La app oficial de Gmail incorpora lo mejor de Gmail en tu teléfono o tablet Android, con seguridad...",
+    "fechaCreacion":"2021-12-09T05:00:00.000Z",
+    "versionActual":"*2021.11.28.415100679",
+    "costo":"*FREE"
+}
+### DELETE BY ID
+
+DELETE  http://localhost:3000/aplicacion/61b8b5c63f3020e4ce887382

@@ -1,0 +1,11 @@
+.fas{
+  color: #3483FA;
+}
+
+.btn:hover{
+  color: white !important;
+  background: #3483FA;
+  .fas{
+    color: white;
+  }
+}
