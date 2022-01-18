@@ -18,6 +18,9 @@ import { RutaReporteComponent } from './modulos/rutas/ruta-reporte/ruta-reporte.
 import { RutaBodegaComponent } from './modulos/rutas/ruta-bodega/ruta-bodega.component';
 import { BannerImagenesComponent } from './componentes/banner-imagenes/banner-imagenes/banner-imagenes.component';
 import {BannerImagenesModule} from "./componentes/banner-imagenes/banner-imagenes.module";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { RutaUsuarioPerfilComponent } from './ruta-usuario-perfil/ruta-usuario-perfil.component';
 @NgModule({
   //Componentes
   declarations: [
@@ -30,7 +33,8 @@ import {BannerImagenesModule} from "./componentes/banner-imagenes/banner-imagene
     RutaUsuarioComponent,
     RutaAppComponent,
     RutaReporteComponent,
-    RutaBodegaComponent
+    RutaBodegaComponent,
+    RutaUsuarioPerfilComponent
   ],
   //Modulos
   imports: [
@@ -38,7 +42,9 @@ import {BannerImagenesModule} from "./componentes/banner-imagenes/banner-imagene
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    BannerImagenesModule
+    BannerImagenesModule,
+    HttpClientModule,
+    FormsModule,
   ],
   //Servicios
   providers: [
