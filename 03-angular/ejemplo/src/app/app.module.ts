@@ -16,11 +16,18 @@ import {EstaLogeadoGuard} from "./app/servicios/auth/esta-logeado.guard";
 import {EsAdministradorGuard} from "./app/servicios/auth/es-administrador.guard";
 import { RutaReporteComponent } from './modulos/rutas/ruta-reporte/ruta-reporte.component';
 import { RutaBodegaComponent } from './modulos/rutas/ruta-bodega/ruta-bodega.component';
-import { BannerImagenesComponent } from './componentes/banner-imagenes/banner-imagenes/banner-imagenes.component';
 import {BannerImagenesModule} from "./componentes/banner-imagenes/banner-imagenes.module";
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { RutaUsuarioPerfilComponent } from './ruta-usuario-perfil/ruta-usuario-perfil.component';
+import {InputSwitchModule} from "primeng/inputswitch";
+import {KnobModule} from "primeng/knob";
+import {SplitButtonModule} from "primeng/splitbutton";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonModule} from "@angular/material/button";
+import { ModalEjemploComponent } from './componentes/modales/modal-ejemplo/modal-ejemplo.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {NgbButtonsModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 @NgModule({
   //Componentes
   declarations: [
@@ -34,7 +41,8 @@ import { RutaUsuarioPerfilComponent } from './ruta-usuario-perfil/ruta-usuario-p
     RutaAppComponent,
     RutaReporteComponent,
     RutaBodegaComponent,
-    RutaUsuarioPerfilComponent
+    RutaUsuarioPerfilComponent,
+    ModalEjemploComponent
   ],
   //Modulos
   imports: [
@@ -44,7 +52,16 @@ import { RutaUsuarioPerfilComponent } from './ruta-usuario-perfil/ruta-usuario-p
     RouterModule,
     BannerImagenesModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule,// Template Driven Forms
+    ReactiveFormsModule, // Template Reactivo
+    InputSwitchModule,
+    KnobModule,
+    BrowserAnimationsModule,
+    SplitButtonModule,
+    MatButtonModule,
+    MatDialogModule,
+    NgbModule,
+    NgbButtonsModule
   ],
   //Servicios
   providers: [
