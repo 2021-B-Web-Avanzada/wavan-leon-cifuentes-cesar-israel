@@ -1,1 +1,30 @@
-<p>ruta-contacto works!</p>
+<div class="container">
+  <div class="row justify-content-center"></div>
+  <div>
+    <a class=" fw-bold" style="text-decoration: none" href="" *ngFor="let r of ruta">{{r}} </a>
+  </div>
+</div>
+<div class="container">
+  <form class="row justify-content-center border needs-validation p-5">
+    <div class="text-center fs-2 fw-bold">Contactenos</div>
+    <div class="row align-items-center`">
+      <label for="nombre" class="form-label fw-bold"> Nombre*: </label>
+      <input type="text" id="nombre" class="col-form-label col-auto rounded" required>
+    </div>
+    <div class="row align-items-center`">
+      <label for="telefono" class="form-label  fw-bold"> Teléfono*: </label>
+      <input type="tel" id="telefono" class="col-form-label col-auto rounded" required>
+    </div>
+    <div class="row align-items-center`">
+      <label for="email" class="form-label  fw-bold"> E-mail*: </label>
+      <input type="email" id="email" class="col-form-label col-auto rounded" required>
+    </div>
+    <div class="row align-items-center input-group`">
+      <label for="descripcion" class="form-label  fw-bold"> Descripción*: </label>
+      <textarea id="descripcion" class="form-control col-auto rounded" placeholder="Descrición..." required> </textarea>
+    </div>
+    <div class="text-center my-3">
+      <button class="btn btn-primary w-25 fw-bold" type="submit">Enviar</button>
+    </div>
+  </form>
+</div>

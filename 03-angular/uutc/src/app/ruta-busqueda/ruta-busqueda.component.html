@@ -1,1 +1,14 @@
-<p>ruta-busqueda works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="fw-bold fs-3">Resultado de búsqueda</div>
+  </div>
+</div>
+<div class="container">
+  <div class="justify-content-start">
+    <div class="w-75 m-2" *ngFor="let e of elemts" style="background: #aaaaaa">
+      <a href="" class="fs-3" style="text-decoration: none">{{e.titulo}}</a>
+      <h4>{{e.fecha}}</h4>
+      <h5>{{e.texto}}</h5>
+    </div>
+  </div>
+</div>

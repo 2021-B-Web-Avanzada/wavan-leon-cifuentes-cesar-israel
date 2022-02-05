@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ruta-directorio.component.scss']
 })
 export class RutaDirectorioComponent implements OnInit {
-
+  ruta = [{
+    ruta:'UTC>',
+    directo:''
+  },
+    {
+      ruta:'Directorio',
+      directo:'/directorio'
+    },
+  ]
   constructor() { }
 
   ngOnInit(): void {

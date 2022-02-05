@@ -1,12 +1,18 @@
-<div class="bg-image img-fluid"
+<div class="bg-image img-fluid py-1"
      style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
-            height: 210px">
-  <div class="display-5 text-center pt-1">
-    <b>Universidad</b><br> Técnica de Cotopaxi
+            height: auto">
+  <div class="container">
+    <div class="row display-5 justify-content-center pt-1">
+      <img src="https://redi.cedia.edu.ec/wkhome/images/orgs/UTC.png" alt="LOGO universidad de cotopaxi" class="h-auto col-lg-3" style="height: auto; width: auto">
+      <div class="col-lg-4 text-center"><b>Universidad</b><br> Técnica de Cotopaxi<br></div>
+
+    </div>
   </div>
+
+
   <div>
-    <div class="mt-3 text-end col-12">
-      <button class="btn py-0 btn-primary mx-1" style="font-size: 40px">
+    <div class=" text-end col-12">
+      <button  class="btn py-0 btn-primary mx-1" style="font-size: 40px">
         <i class="fab fa-facebook-square"></i>
       </button>
       <button class="btn py-0 btn-primary mx-1" style="font-size: 40px">
@@ -25,22 +31,19 @@
     </div>
   </div>
 </div>
-<div class="row justify-content-end my-2">
-  Buscar:
-  <div class="col-3 me-5">
-    <form class="w-100 me-3">
-      <input type="search" class="form-control" placeholder="" aria-label="Search">
+<div class="row justify-content-end w-100 mt-3">
+  <label for="busqueda" class="w-auto">Buscar:</label>
+  <div class="col-lg-2">
+    <form  id="busqueda">
+      <input type="search" class="form-control" placeholder="" aria-label="Search)" (keydown.enter)="onEnter()">
     </form>
   </div>
 </div>
 <div class="text-center">
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle m-1 px-4" data-bs-toggle="dropdown" aria-expanded="false">
+    <button type="button" class="btn btn-secondary m-1 px-4"aria-expanded="false">
       Inicio
     </button>
-    <ul class="dropdown-menu">
-
-    </ul>
     <button type="button" class="btn btn-secondary dropdown-toggle m-1 px-4" data-bs-toggle="dropdown" aria-expanded="false">
       UTC
     </button>
@@ -52,23 +55,37 @@
       Pregrado
     </button>
     <ul class="dropdown-menu">
-
+      <li>CAREN</li>
+      <li>CIYA</li>
+      <li>Administrativas</li>
+      <li>Humanas</li>
+      <li>Extensión Pujilí</li>
     </ul>
     <button type="button" class="btn btn-secondary dropdown-toggle m-1 px-4" data-bs-toggle="dropdown" aria-expanded="false">
       Posgrado
     </button>
     <ul class="dropdown-menu">
-
+      <li>Educación Básica - La Maná</li>
+      <li>Lingüistica - Idioma Inglés</li>
+      <li>Electromecánica</li>
+      <li>Administración de Empresas</li>
     </ul>
     <button type="button" class="btn btn-secondary dropdown-toggle m-1 px-4" data-bs-toggle="dropdown" aria-expanded="false">
       Investigración
     </button>
     <ul class="dropdown-menu">
-
+      <li>Quienes somos</li>
+      <li>Líneas Investigación</li>
+      <li>Grupos de Investigación</li>
+      <li>Convocatorias y Resultados</li>
     </ul>
+    <button type="button" class="btn btn-secondary m-1 px-4"aria-expanded="false">
+      Preguntas Frecuentes
+    </button>
   </div>
 </div>
 
 <router-outlet></router-outlet>
+
 
 

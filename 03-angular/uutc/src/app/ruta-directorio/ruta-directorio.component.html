@@ -1,1 +1,59 @@
-<p>ruta-directorio works!</p>
+<div class="container">
+  <div class="row justify-content-center"></div>
+  <div>
+    <a class=" fw-bold" style="text-decoration: none" href="{{r.directo}}" *ngFor="let r of ruta">{{r.ruta}} </a>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center m-5">
+    <div class="col-11">
+      <div class="btn-group mx-3">
+        <button type="button" class="btn dropdown-toggle btn-dark" data-bs-toggle="dropdown" aria-expanded="false">
+          Extensión
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Latacunga</a></li>
+          <li><a class="dropdown-item" href="#">La Maná</a></li>
+          <li><a class="dropdown-item" href="#">Pujilí</a></li>
+        </ul>
+      </div>
+
+      <div class="btn-group mx-3">
+        <button type="button" class="btn dropdown-toggle btn-dark" data-bs-toggle="dropdown" aria-expanded="false">
+          Departamento
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Administración</a></li>
+          <li><a class="dropdown-item" href="#">Ciencias</a></li>
+          <li><a class="dropdown-item" href="#">Tecnología</a></li>
+        </ul>
+      </div>
+
+      <div class="btn-group mx-3">
+        <button type="button" class="btn dropdown-toggle btn-dark" data-bs-toggle="dropdown" aria-expanded="false">
+          Facultad
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Sistemas</a></li>
+          <li><a class="dropdown-item" href="#">Química</a></li>
+          <li><a class="dropdown-item" href="#">Cultura Física</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="text-center align-content-center m-3">
+  <table class="table w-75">
+    <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Teléfono</th>
+    </tr>
+    </thead>
+  </table>
+</div>
+</div>
